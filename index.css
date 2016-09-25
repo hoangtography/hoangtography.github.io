@@ -12,7 +12,7 @@ body{
 .header{
 	position: relative;
 	height: 600px;
-	background: url('/imgs/_assets/bg.jpg');
+	background: url('/imgs/assets/bg.jpg');
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
@@ -22,7 +22,7 @@ body{
 	width: 100%;
 	height: 150px;
 	top: 20%;
-	background: url('/imgs/_assets/hoang.svg');
+	background: url('/imgs/assets/hoang.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -33,7 +33,7 @@ body{
 	max-width: 960px;
 	height: 385px;
 	margin: 0 auto;
-	background: url('/imgs/_assets/subject.png');
+	background: url('/imgs/assets/subject.png');
 	background-repeat: no-repeat;
 	background-position: right;
 }
