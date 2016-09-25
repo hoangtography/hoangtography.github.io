@@ -1,0 +1,183 @@
+body, html{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: "Open Sans", sans-serif;
+	color: #333;
+}
+.body{
+	overflow: hidden;
+}
+.header{
+	position: relative;
+	height: 600px;
+	background: url('/imgs/_assets/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+}
+.title{
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: 20%;
+	background: url('/imgs/_assets/hoang.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.hoang{
+	position: relative;
+	top: 350px;
+	max-width: 960px;
+	height: 385px;
+	margin: 0 auto;
+	background: url('/imgs/_assets/subject.png');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.grid{
+	max-width: 1200px;
+	margin: 50px auto;
+}
+.grid-sizer{
+	width: 20%;
+}
+.grid-item{
+	position: relative;
+	width: 20%;
+	height: 240px;
+	font-size: 0;
+	padding: 5px;
+	box-sizing: border-box;
+	transform: translateY(200px);
+	opacity: 0;
+	transition: all 400ms ease;
+}
+.shown{
+	transform: translateY(0px);
+	opacity: 1;
+}
+.grid-item img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	-webkit-filter: brightness(100%);
+	filter: brightness(100%);
+	transition: all 250ms ease;
+	cursor: pointer;
+}
+.grid-item img:hover{
+	-webkit-filter: brightness(80%);
+	filter: brightness(80%);
+}
+.widthx2{
+	width: 40%;
+}
+.widthx3{
+	width: 60%;
+}
+.widthx4{
+	width: 80%;
+}
+.widthx5{
+	width: 100%;
+}
+.heightx2{
+	height: 480px;
+}
+@media (max-width: 1200px){
+	.grid{
+		max-width: 960px;
+	}
+	.grid-item{
+		height: 192px;
+	}
+	.heightx2{
+		height: 384px;
+	}
+}
+@media (max-width: 960px){
+	.grid{
+		max-width: 720px;
+	}
+	.grid-item{
+		height: 144px;
+	}
+	.heightx2{
+		height: 288px;
+	}
+}
+@media (max-width: 720px){
+	.grid{
+		max-width: 100%;
+	}
+	.grid-sizer{
+		width: 100%;
+	}
+	.grid-item{
+		width: 100%;
+		height: 400px;
+		padding: 5px 10px
+	}
+	.heightx2{
+		height: 400px;
+	}
+	.widthx2{
+		width: 100%;
+	}
+	.widthx3{
+		width: 100%;
+	}
+	.widthx4{
+		width: 100%;
+	}
+	.widthx5{
+		width: 100%;
+	}
+}
+@media (max-width: 500px){
+	.grid-item{
+		height: 250px;
+	}
+	.heightx2{
+		height: 250px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
