@@ -1,2 +1,2 @@
 # hoangtography.github.io
-* A simple photographer portfolio *
+*A simple photographer portfolio*
