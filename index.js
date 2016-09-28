@@ -175,7 +175,11 @@ var zoomViewClose = function(){
 	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
 	
 	//delete everything in .img-wrapper before loading again
-	$('.img-wrapper').html('');
+	setTimeout(function(){
+		
+		$('.img-wrapper').html('');
+		
+	}, 750ms);
 	
 }
 $(window).on('load', function(){
