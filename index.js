@@ -30,7 +30,7 @@ var wScroll = $(window).scrollTop();
 var data = [
 	$('<div class="grid-item hidden"><img src="/imgs/thumbnail25.jpg" postURL="/posts/25.html"></div>'),
 	$('<div class="grid-item hidden"><img src="/imgs/thumbnail26.jpg" postURL="/posts/26.html"></div>'),
-	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail27.jpg" postURL="/post/27.html"></div>'),
+	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail27.jpg" postURL="/posts/27.html"></div>'),
 	$('<div class="grid-item hidden widthx3"><img src="/imgs/thumbnail28.jpg" postURL="/posts/28.html"></div>'),
 	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail34.jpg" postURL="/posts/34.html"></div>'),
 	$('<div class="grid-item hidden"><img src="/imgs/thumbnail29.jpg" postURL="/posts/29.html"></div>'),
