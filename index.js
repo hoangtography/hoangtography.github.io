@@ -173,7 +173,10 @@ var zoomViewClose = function(){
 	$('.shade').removeClass('shade-active');
 
 	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
-
+	
+	//delete everything in .img-wrapper before loading again
+	$('.img-wrapper').html('');
+	
 }
 $(window).on('load', function(){
 
