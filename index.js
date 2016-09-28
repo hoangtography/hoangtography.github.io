@@ -179,7 +179,7 @@ var zoomViewClose = function(){
 		
 		$('.img-wrapper').html('');
 		
-	}, 750ms);
+	}, 750);
 	
 }
 $(window).on('load', function(){
