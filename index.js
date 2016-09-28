@@ -28,74 +28,74 @@ var i = 0;
 var loaded = false;
 var wScroll = $(window).scrollTop();
 var data = [
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail25.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail26.jpg"></div>'),
-	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail27.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3"><img src="/imgs/thumbnail28.jpg"></div>'),
-	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail34.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail29.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail30.jpg"></div>'),
-	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail36.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail31.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail32.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail33.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail38.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail35.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail37.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail39.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail40.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3"><img src="/imgs/thumbnail41.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail42.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail43.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail44.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail45.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail46.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail47.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail48.jpg"></div>'),
-	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail53.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail49.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail50.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail51.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail52.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail54.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail55.jpg"></div>'),
-	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail56.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail57.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail58.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail59.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail60.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail61.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail62.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail63.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail64.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail65.jpg"></div>'),
-	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail66.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail67.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail68.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail69.jpg"></div>'),
-	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail70.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail71.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail72.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail73.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail74.jpg"></div>'),
-	$('<div class="grid-item hidden widthx2"><img src="/imgs/thumbnail75.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail76.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail77.jpg"></div>'),
-	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail78.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail79.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail80.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail81.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail82.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail83.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail84.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail85.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail87.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail88.jpg"></div>'),
-	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail89.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail90.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail91.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail92.jpg"></div>'),
-	$('<div class="grid-item hidden"><img src="/imgs/thumbnail93.jpg"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail25.jpg" postURL="/posts/25.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail26.jpg" postURL="/posts/26.html"></div>'),
+	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail27.jpg" postURL="/post/27.html"></div>'),
+	$('<div class="grid-item hidden widthx3"><img src="/imgs/thumbnail28.jpg" postURL="/posts/28.html"></div>'),
+	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail34.jpg" postURL="/posts/34.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail29.jpg" postURL="/posts/29.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail30.jpg" postURL="/posts/30.html"></div>'),
+	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail36.jpg" postURL="/posts/36.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail31.jpg" postURL="/posts/31.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail32.jpg" postURL="/posts/32.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail33.jpg" postURL="/posts/33.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail38.jpg" postURL="/posts/38.html"></div>'),
+	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail35.jpg" postURL="/posts/35.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail37.jpg" postURL="/posts/37.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail39.jpg" postURL="/posts/39.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail40.jpg" postURL="/posts/40.html"></div>'),
+	$('<div class="grid-item hidden widthx3"><img src="/imgs/thumbnail41.jpg" postURL="/posts/41.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail42.jpg" postURL="/posts/42.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail43.jpg" postURL="/posts/43.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail44.jpg" postURL="/posts/44.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail45.jpg" postURL="/posts/45.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail46.jpg" postURL="/posts/46.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail47.jpg" postURL="/posts/47.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail48.jpg" postURL="/posts/48.html"></div>'),
+	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail53.jpg" postURL="/posts/53.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail49.jpg" postURL="/posts/49.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail50.jpg" postURL="/posts/50.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail51.jpg" postURL="/posts/51.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail52.jpg" postURL="/posts/52.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail54.jpg" postURL="/posts/54.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail55.jpg" postURL="/posts/55.html"></div>'),
+	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail56.jpg" postURL="/posts/56.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail57.jpg" postURL="/posts/57.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail58.jpg" postURL="/posts/58.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail59.jpg" postURL="/posts/59.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail60.jpg" postURL="/posts/60.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail61.jpg" postURL="/posts/61.html"></div>'),
+	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail62.jpg" postURL="/posts/62.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail63.jpg" postURL="/posts/63.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail64.jpg" postURL="/posts/64.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail65.jpg" postURL="/posts/65.html"></div>'),
+	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail66.jpg" postURL="/posts/66.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail67.jpg" postURL="/posts/67.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail68.jpg" postURL="/posts/68.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail69.jpg" postURL="/posts/69.html"></div>'),
+	$('<div class="grid-item hidden widthx2 heightx2"><img src="/imgs/thumbnail70.jpg" postURL="/posts/70.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail71.jpg" postURL="/posts/71.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail72.jpg" postURL="/posts/72.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail73.jpg" postURL="/posts/73.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail74.jpg" postURL="/posts/74.html"></div>'),
+	$('<div class="grid-item hidden widthx2"><img src="/imgs/thumbnail75.jpg" postURL="/posts/75.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail76.jpg" postURL="/posts/76.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail77.jpg" postURL="/posts/77.html"></div>'),
+	$('<div class="grid-item hidden heightx2"><img src="/imgs/thumbnail78.jpg" postURL="/posts/78.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail79.jpg" postURL="/posts/79.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail80.jpg" postURL="/posts/80.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail81.jpg" postURL="/posts/81.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail82.jpg" postURL="/posts/82.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail83.jpg" postURL="/posts/83.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail84.jpg" postURL="/posts/84.html"></div>'),
+	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail85.jpg" postURL="/posts/85.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail87.jpg" postURL="/posts/87.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail88.jpg" postURL="/posts/88.html"></div>'),
+	$('<div class="grid-item hidden widthx3 heightx2"><img src="/imgs/thumbnail89.jpg" postURL="/posts/89.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail90.jpg" postURL="/posts/90.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail91.jpg" postURL="/posts/91.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail92.jpg" postURL="/posts/92.html"></div>'),
+	$('<div class="grid-item hidden"><img src="/imgs/thumbnail93.jpg" postURL="/posts/93.html"></div>'),
 ]
 //itemClass should begin without the dot
 var imgFadein = function(itemClass){
@@ -166,6 +166,15 @@ var imgLoad = function(){
 	}
 
 }
+var zoomViewClose = function(){
+
+	$('body').css('overflow', 'scroll');
+
+	$('.shade').removeClass('shade-active');
+
+	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
+
+}
 $(window).on('load', function(){
 
 	WebFont.load({
@@ -215,7 +224,67 @@ $(window).on('load', function(){
 
 	})
 
+	$('.grid').on('click', '.grid-item img', function(){
+		
+		$('.zoom-wrapper').scrollTop(0);
+
+		$('body').css('overflow', 'hidden');
+
+		$('.shade').addClass('shade-active');
+
+		$('.zoom-wrapper').addClass('zoom-wrapper-slided');
+
+		//dynamically load image on click
+		$('.img-wrapper').load( $(this).attr('postURL') );
+
+		//dynamically load comment threads on click
+		var imageUrl = 'http://hoangtography.com/#!' + $(this).attr('src');
+		
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = imageUrl;
+                this.page.url = imageUrl;
+            }
+        });
+	
+	})
+
+	//close on clicking on the outside
+	$('.zoom-wrapper').on('click', function(e){
+
+		if(e.target.className == 'zoom-wrapper zoom-wrapper-slided'){
+
+			zoomViewClose();
+
+		}
+
+	})
+
+	//close on clicking the close button
+	$('.close').on('click', function(){
+
+		zoomViewClose();
+
+	})
+
+	//close on pressing escape
+	$(document).on('keydown', function(e){
+
+		if(e.keyCode == 27){
+
+			zoomViewClose();
+
+		}
+
+	})
+
 })
+
+
+
+
+
 
 
 
