@@ -243,8 +243,6 @@ $(window).on('load', function(){
 
 		$('.loading-icon').addClass('visible');
 
-		$('.zoom-wrapper').addClass('zoom-wrapper-slided');
-
 		//dynamically load image on click
 		$('.img-wrapper').load($(this).attr('postURL'), function(){
 			
@@ -253,6 +251,8 @@ $(window).on('load', function(){
 				$('.loading-icon').removeClass('visible');
 
 				$('.zoom-wrapper').addClass('visible');
+
+				$('.zoom-wrapper').addClass('zoom-wrapper-slided');
 
 			})
 
@@ -274,7 +274,7 @@ $(window).on('load', function(){
 	//close on clicking on the outside
 	$('.zoom-wrapper').on('click', function(e){
 
-		if(e.target.className == 'zoom-wrapper zoom-wrapper-slided visible'){
+		if(e.target.className == 'zoom-wrapper visible zoom-wrapper-slided'){
 
 			zoomViewClose();
 
