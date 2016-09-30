@@ -23,6 +23,21 @@ body{
 	z-index: 0;
 	transition: opacity 750ms ease, z-index 0ms 750ms;
 }
+.loading-icon{
+	position: fixed;
+	width: 32px;
+	height: 32px;
+	animation: rainbow 1s ease infinite, rotate .5s ease infinite;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	margin-top: -16px;
+	margin-left: -16px;
+	display: none;
+}
+.loading-icon.visible{
+	display: block;
+}
 .shade-active{
 	opacity: .8;
 	z-index: 1;
@@ -38,6 +53,10 @@ body{
 	background: transparent;
 	transition: all 750ms ease;
 	overflow-y: scroll;
+	visibility: hidden;
+}
+.zoom-wrapper.visible{
+	visibility: visible;
 }
 .zoom-wrapper .close{
 	position: absolute;
@@ -217,8 +236,18 @@ body{
 		height: 250px;
 	}
 }
-
-
+@keyframes rainbow{
+	0%{background-color: #ee4035}
+	20%{background-color: #f37736;}
+	40%{background-color: #fdf498;}
+	60%{background-color: #7bc043;}
+	80%{background-coor: #0392cf;}
+	100%{background-color: #ee4035;}
+}
+@keyframes rotate{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(90deg);}
+}
 
 
 
