@@ -170,6 +170,8 @@ var zoomViewClose = function(){
 
 	$('body').css('overflow-y', 'scroll');
 
+	$('.loading-icon').removeClass('visible');
+	
 	$('.shade').removeClass('shade-active');
 
 	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
