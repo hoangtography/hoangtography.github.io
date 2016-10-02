@@ -168,7 +168,8 @@ var imgLoad = function(){
 }
 var zoomViewClose = function(){
 
-	$('body').css('overflow-y', 'scroll');
+	$('html').removeClass('locked');
+	$('body').removeClass('locked');
 
 	$('.loading-icon').removeClass('visible');
 	
@@ -239,7 +240,8 @@ $(window).on('load', function(){
 		
 		$('.zoom-wrapper').scrollTop(0);
 
-		$('body').css('overflow', 'hidden');
+		$('html').addClass('locked');
+		$('body').addClass('locked');
 
 		$('.shade').addClass('shade-active');
 

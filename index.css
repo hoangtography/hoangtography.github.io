@@ -7,10 +7,12 @@ body{
 	font-family: "Open Sans", sans-serif;
 	color: #333;
 }
+body.locked{
+	overflow: hidden;
+}
 .body{
 	position: relative;
 	width: 100%;
-	filter: blur(0px);
 }
 .shade{
 	position: fixed;
@@ -174,6 +176,10 @@ body{
 }
 .heightx2{
 	height: 480px;
+}
+noscript{
+	display: block;
+	text-align: center;
 }
 @media (max-width: 1200px){
 	.grid{
