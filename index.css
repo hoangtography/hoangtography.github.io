@@ -4,7 +4,7 @@ body, html{
 }
 body{
 	position: relative;
-	font-family: "Open Sans", sans-serif;
+	font-family: sans-serif;
 	color: #333;
 }
 body.locked{
@@ -92,6 +92,7 @@ body.locked{
 .zoom-content .img-wrapper h2{
 	color: #555;
 	padding: 1rem 1rem;
+	font-weight: 400;
 }
 .zoom-content #disqus_thread{
 	margin-top: 70px;
@@ -206,6 +207,7 @@ noscript{
 @media (max-width: 720px){
 	.grid{
 		max-width: 100%;
+		padding: 15px 0;
 	}
 	.grid-sizer{
 		width: 100%;
@@ -213,7 +215,7 @@ noscript{
 	.grid-item{
 		width: 100%;
 		height: 400px;
-		padding: 5px 10px
+		padding: 5px 10px;
 	}
 	.heightx2{
 		height: 400px;
@@ -231,7 +233,7 @@ noscript{
 		width: 100%;
 	}
 	.zoom-content .img-wrapper h2{
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 }
 @media (max-width: 500px){
