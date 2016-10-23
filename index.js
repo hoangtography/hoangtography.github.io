@@ -158,7 +158,8 @@ var zoomViewClose = function(){
 	$('body').removeClass('locked');
 
 	$('.loading-icon').removeClass('visible');
-	
+
+	$('.fullBodyShade').removeClass('active');
 	$('.shade').removeClass('shade-active');
 
 	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
@@ -254,7 +255,6 @@ $(window).on('load', function(){
 	$('.grid').on('click', '.grid-item img', function(){
 
 		wScrollBuffer = wScroll;
-		console.log(wScrollBuffer);
 		
 		$('.zoom-wrapper').scrollTop(0);
 
@@ -272,6 +272,8 @@ $(window).on('load', function(){
 			$('img').on('load', function(){
 
 				scrollUnlock();
+
+				$('.fullBodyShade').addClass('active');
 
 				$('.loading-icon').removeClass('visible');
 
