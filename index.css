@@ -262,6 +262,10 @@ noscript{
 	.zoom-content .img-wrapper h2{
 		font-size: 1.1rem;
 	}
+	.zoom-content{
+		margin: 0px auto;
+		padding: 70px 5px;
+	}
 }
 @media (max-width: 500px){
 	.grid-item{
