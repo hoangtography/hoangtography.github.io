@@ -9,6 +9,7 @@ body{
 }
 body.locked{
 	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 .body{
 	position: relative;
@@ -18,8 +19,8 @@ body.locked{
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	width: 100vw;
+	height: 100vh;
 	background-color: black;
 	opacity: 0;
 	z-index: 0;
@@ -79,6 +80,7 @@ body.locked{
 	background-color: #f2f2f2;
 	z-index: 3;
 	padding: 20px;
+	box-sizing: border-box;
 }
 .zoom-content .img-wrapper{
 	padding: 10px;
@@ -202,6 +204,14 @@ noscript{
 	}
 	.heightx2{
 		height: 288px;
+	}
+	.zoom-content{
+		margin: 0px auto;
+		padding: 70px 20px;
+	}
+	.zoom-wrapper .close{
+		z-index: 4;
+		color: #333;
 	}
 }
 @media (max-width: 720px){

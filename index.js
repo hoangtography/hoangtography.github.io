@@ -9,6 +9,7 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
 var i = 0;
 var loaded = false;
 var wScroll = $(window).scrollTop();
+var wScrollBuffer = wScroll;
 var data = [
 	$('<div class="grid-item hidden"><img src="/imgs/thumbnail25.jpg" postURL="/posts/25.html"></div>'),
 	$('<div class="grid-item hidden"><img src="/imgs/thumbnail26.jpg" postURL="/posts/26.html"></div>'),
@@ -150,6 +151,9 @@ var imgLoad = function(){
 }
 var zoomViewClose = function(){
 
+	//restore wScroll
+	$(window).scrollTop(wScrollBuffer);
+
 	$('html').removeClass('locked');
 	$('body').removeClass('locked');
 
@@ -169,7 +173,44 @@ var zoomViewClose = function(){
 	$('.zoom-wrapper').removeClass('visible');
 	
 }
+var scrollLock = function(){
+
+	$(window).bind('touchmove', function(e){
+
+			e.preventDefault();
+
+		}
+	);
+}
+var scrollUnlock = function(){
+
+	$(window).unbind('touchmove');
+
+}
+function removeIOSRubberEffect( element ) {
+
+    element.addEventListener( "touchstart", function () {
+
+        var top = element.scrollTop, totalScroll = element.scrollHeight, currentScroll = top + element.offsetHeight;
+
+        if ( top === 0 ) {
+            element.scrollTop = 1;
+        } else if ( currentScroll === totalScroll ) {
+            element.scrollTop = top - 1;
+        }
+
+    } );
+
+}
+scrollLock();
 $(window).on('load', function(){
+
+	//remove loading icon & reactivate scrolling once loaded
+	$('html').removeClass('locked');
+	$('body').removeClass('locked');
+	$('.loading-icon').removeClass('visible');
+	$('.shade').removeClass('shade-active');
+	scrollUnlock();
 
 	$('.grid').masonry({
 
@@ -211,11 +252,15 @@ $(window).on('load', function(){
 	})
 
 	$('.grid').on('click', '.grid-item img', function(){
+
+		wScrollBuffer = wScroll;
+		console.log(wScrollBuffer);
 		
 		$('.zoom-wrapper').scrollTop(0);
 
 		$('html').addClass('locked');
 		$('body').addClass('locked');
+		scrollLock();
 
 		$('.shade').addClass('shade-active');
 
@@ -226,11 +271,17 @@ $(window).on('load', function(){
 			
 			$('img').on('load', function(){
 
+				scrollUnlock();
+
 				$('.loading-icon').removeClass('visible');
 
 				$('.zoom-wrapper').addClass('visible');
 
 				$('.zoom-wrapper').addClass('zoom-wrapper-slided');
+
+				$('.zoom-wrapper-slided').scrollTop(1);
+
+				removeIOSRubberEffect( document.querySelector( ".zoom-wrapper" ) );
 
 			})
 
