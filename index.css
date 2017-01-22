@@ -148,7 +148,7 @@ body.locked{
 .grid{
 	max-width: 1200px;
 	margin: 0px auto;
-	padding: 50px 0;
+	padding: 0px;
 }
 .grid-sizer{
 	width: 20%;
@@ -215,6 +215,7 @@ noscript{
 @media (max-width: 960px){
 	.grid{
 		max-width: 720px;
+		padding: 50px 0px 50px;
 	}
 	.grid-item{
 		height: 144px;
@@ -233,31 +234,15 @@ noscript{
 }
 @media (max-width: 720px){
 	.grid{
-		max-width: 100%;
-		padding: 15px 0;
-	}
-	.grid-sizer{
-		width: 100%;
+		max-width: 600px;
+		padding: 0px 0px 50px;
 	}
 	.grid-item{
-		width: 100%;
-		height: 400px;
-		padding: 5px 10px;
+		height: 120px;
+		padding: 2px;
 	}
 	.heightx2{
-		height: 400px;
-	}
-	.widthx2{
-		width: 100%;
-	}
-	.widthx3{
-		width: 100%;
-	}
-	.widthx4{
-		width: 100%;
-	}
-	.widthx5{
-		width: 100%;
+		height: 240px;
 	}
 	.zoom-content .img-wrapper h2{
 		font-size: 1.1rem;
@@ -266,13 +251,45 @@ noscript{
 		margin: 0px auto;
 		padding: 70px 5px;
 	}
+	.zoom-wrapper .close{
+		z-index: 4;
+		color: #333;
+	}
 }
-@media (max-width: 500px){
+@media (max-width: 600px){
+	.grid{
+		max-width: 500px;
+	}
 	.grid-item{
-		height: 250px;
+		height: 100px;
+		padding: 2px;
 	}
 	.heightx2{
-		height: 250px;
+		height: 200px;
+	}
+}
+@media (max-width: 500px){
+	.grid{
+		max-width: 400px;
+	}
+	.grid-item{
+		height: 80px;
+		padding: 2px;
+	}
+	.heightx2{
+		height: 160px;
+	}
+}
+@media (max-width: 400px){
+	.grid{
+		max-width: 320px;
+	}
+	.grid-item{
+		height: 64px;
+		padding: 2px;
+	}
+	.heightx2{
+		height: 128px;
 	}
 }
 @keyframes rainbow{
@@ -287,36 +304,3 @@ noscript{
 	0%{transform: rotate(0deg);}
 	100%{transform: rotate(90deg);}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

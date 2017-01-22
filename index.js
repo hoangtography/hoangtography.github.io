@@ -114,12 +114,14 @@ var imgFadein = function(itemClass){
 }
 var imgLoad = function(){
 
-	if(wScroll + $(window).height() >= ($(document).height()) && loaded === true){
+	if(wScroll + $(window).height() >= ($('.grid').height() + $('.grid').offset().top) && loaded === true){
+
+		console.log('exceeded!');
 
 		//if more than 20 items are left, load the next 20 items
 		//if less than 20 items are left, load all that left
 		if(data[i+9]){
-			
+
 			var iPlusNine = i + 19;
 
 			while(i <= iPlusNine){
@@ -129,7 +131,7 @@ var imgLoad = function(){
 				imgFadein('hidden');
 
 				i++;
-				
+
 			}
 
 		}else{
@@ -141,7 +143,7 @@ var imgLoad = function(){
 				imgFadein('hidden');
 
 				i++;
-				
+
 			}
 
 		}
@@ -163,16 +165,16 @@ var zoomViewClose = function(){
 	$('.shade').removeClass('shade-active');
 
 	$('.zoom-wrapper').removeClass('zoom-wrapper-slided');
-	
+
 	//delete everything in .img-wrapper before loading again
 	setTimeout(function(){
-		
+
 		$('.img-wrapper').html('');
-		
+
 	}, 750);
 
 	$('.zoom-wrapper').removeClass('visible');
-	
+
 }
 var scrollLock = function(){
 
@@ -255,7 +257,7 @@ $(window).on('load', function(){
 	$('.grid').on('click', '.grid-item img', function(){
 
 		wScrollBuffer = wScroll;
-		
+
 		$('.zoom-wrapper').scrollTop(0);
 
 		$('html').addClass('locked');
@@ -268,7 +270,7 @@ $(window).on('load', function(){
 
 		//dynamically load image on click
 		$('.img-wrapper').load($(this).attr('postURL'), function(){
-			
+
 			$('img').on('load', function(){
 
 				scrollUnlock();
@@ -291,7 +293,7 @@ $(window).on('load', function(){
 
 		//dynamically load comment threads on click
 		var imageUrl = 'http://hoangtography.com/#!' + $(this).attr('src');
-		
+
         DISQUS.reset({
             reload: true,
             config: function () {
@@ -299,7 +301,7 @@ $(window).on('load', function(){
                 this.page.url = imageUrl;
             }
         });
-	
+
 	})
 
 	//close on clicking on the outside
@@ -332,42 +334,3 @@ $(window).on('load', function(){
 	})
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
