@@ -215,7 +215,7 @@ noscript{
 @media (max-width: 960px){
 	.grid{
 		max-width: 720px;
-		padding: 50px 0px 50px;
+		padding: 50px 0px 100px;
 	}
 	.grid-item{
 		height: 144px;
@@ -235,7 +235,7 @@ noscript{
 @media (max-width: 720px){
 	.grid{
 		max-width: 600px;
-		padding: 0px 0px 50px;
+		padding: 0px 0px 100px;
 	}
 	.grid-item{
 		height: 120px;
